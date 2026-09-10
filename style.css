@@ -1,1 +1,206 @@
+```css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin: 20px 0 12px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.generate {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.invoice {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.invoice-header h2 {
+    margin-top: 0;
+}
+
+.invoice-header p {
+    margin: 5px 0;
+    color: #555;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f5f5f5;
+}
+
+.totals {
+    margin-top: 25px;
+    margin-left: auto;
+    max-width: 300px;
+}
+
+.totals p {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+
+.balance {
+    font-size: 18px;
+    border-top: 2px solid #222;
+    margin-top: 8px;
+    padding-top: 12px !important;
+}
+
+.thank-you {
+    text-align: center;
+    margin-top: 35px;
+    color: #666;
+}
+
+.print-button {
+    display: block;
+    margin: 20px auto 0;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .invoice,
+    .form-section {
+        padding: 18px;
+    }
+
+    .item {
+        grid-template-columns: 1fr;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+    }
+}
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .form-section,
+    h1,
+    .subtitle {
+        display: none;
+    }
+
+    .invoice {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .print-button {
+        display: none;
+    }
+}
+```
 
