@@ -1,1 +1,131 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice & Receipt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Invoice & Receipt Generator</h1>
+    <p class="subtitle">Create professional invoices and receipts</p>
+
+    <div class="form-section">
+
+        <h2>Business Information</h2>
+
+        <input type="text" id="businessName" placeholder="Business Name">
+        <input type="text" id="businessPhone" placeholder="Phone Number">
+        <input type="text" id="businessAddress" placeholder="Business Address">
+
+        <h2>Customer Information</h2>
+
+        <input type="text" id="customerName" placeholder="Customer Name">
+
+        <h2>Invoice Items</h2>
+
+        <div id="items">
+
+            <div class="item">
+                <input type="text" class="itemName" placeholder="Item / Service">
+                <input type="number" class="quantity" placeholder="Qty" value="1">
+                <input type="number" class="price" placeholder="Price">
+            </div>
+
+        </div>
+
+        <button onclick="addItem()">+ Add Item</button>
+
+        <h2>Payment</h2>
+
+        <input type="number" id="amountPaid" placeholder="Amount Paid">
+
+        <button class="generate" onclick="generateInvoice()">
+            Generate Invoice
+        </button>
+
+    </div>
+
+
+    <div id="invoice" class="invoice">
+
+        <div class="invoice-header">
+
+            <div>
+                <h2 id="displayBusiness">Your Business</h2>
+                <p id="displayPhone"></p>
+                <p id="displayAddress"></p>
+            </div>
+
+            <div>
+                <h2>INVOICE</h2>
+                <p>Invoice #: <span id="invoiceNumber"></span></p>
+                <p>Date: <span id="invoiceDate"></span></p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p>
+            <strong>Customer:</strong>
+            <span id="displayCustomer"></span>
+        </p>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Item / Service</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="invoiceItems"></tbody>
+
+        </table>
+
+        <div class="totals">
+
+            <p>
+                Subtotal:
+                <strong>₦<span id="subtotal">0.00</span></strong>
+            </p>
+
+            <p>
+                Amount Paid:
+                <strong>₦<span id="paid">0.00</span></strong>
+            </p>
+
+            <p class="balance">
+                Balance:
+                <strong>₦<span id="balance">0.00</span></strong>
+            </p>
+
+        </div>
+
+        <p class="thank-you">
+            Thank you for your business!
+        </p>
+
+        <button onclick="window.print()" class="print-button">
+            🖨️ Print Invoice
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
 
